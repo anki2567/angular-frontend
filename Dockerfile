@@ -7,6 +7,9 @@ COPY package*.json ./
 RUN npm install
 # Copy the remaining application code to the working directory
 COPY . .
+# Set environment variables
+ENV HOST=0.0.0.0
+ENV PORT=4200
 # Expose port 4200
 EXPOSE 4200
 # Command to run the application
